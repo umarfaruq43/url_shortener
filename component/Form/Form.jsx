@@ -212,19 +212,20 @@ const Form = ({}) => {
                     </Box>
                 </Box>
                 {/*   History */}
-                {newlink
-                    .slice(newlink.length - 3, newlink.length)
-                    .reverse()
-                    .map(({ longLink, shortLink }, i) => {
-                        return (
-                            <div key={i}>
-                                <HistoryCard
-                                    shortLink={shortLink}
-                                    longLink={longLink}
-                                />
-                            </div>
-                        );
-                    })}
+                {newlink &&
+                    newlink
+                        .slice(newlink.length - 3, newlink.length)
+                        .reverse()
+                        .map(({ longLink, shortLink }, i) => {
+                            return (
+                                <div key={i}>
+                                    <HistoryCard
+                                        shortLink={shortLink}
+                                        longLink={longLink}
+                                    />
+                                </div>
+                            );
+                        })}
             </Box>
         </ScreenWidth>
     );
