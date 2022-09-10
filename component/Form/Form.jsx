@@ -108,8 +108,10 @@ const Form = ({}) => {
     // console.log(newlink);
     useEffect(() => {
         const initialLinks = JSON.parse(localStorage.getItem("links"));
-        if ( initialLinks.length != 0) {
-            setNewlink(initialLinks);
+        {
+            initialLinks && initialLinks.length != 0
+                ? setNewlink(initialLinks)
+                : null;
         }
     }, []);
     useEffect(() => {
