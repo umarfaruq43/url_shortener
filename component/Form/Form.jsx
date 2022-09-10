@@ -214,7 +214,7 @@ const Form = ({}) => {
                     </Box>
                 </Box>
                 {/*   History */}
-                {/* {newlink &&
+                {newlink &&
                     newlink
                         .slice(newlink.length - 3, newlink.length)
                         .reverse()
@@ -227,7 +227,7 @@ const Form = ({}) => {
                                     />
                                 </div>
                             );
-                        })} */}
+                        })}
             </Box>
         </ScreenWidth>
     );
