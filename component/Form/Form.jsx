@@ -108,7 +108,7 @@ const Form = ({}) => {
     // console.log(newlink);
     useEffect(() => {
         const initialLinks = JSON.parse(localStorage.getItem("links"));
-        if (initialLinks.length != 0) {
+        if ( initialLinks.length != 0) {
             setNewlink(initialLinks);
         }
     }, []);
@@ -212,7 +212,7 @@ const Form = ({}) => {
                     </Box>
                 </Box>
                 {/*   History */}
-                {newlink &&
+                {/* {newlink &&
                     newlink
                         .slice(newlink.length - 3, newlink.length)
                         .reverse()
@@ -225,7 +225,7 @@ const Form = ({}) => {
                                     />
                                 </div>
                             );
-                        })}
+                        })} */}
             </Box>
         </ScreenWidth>
     );
